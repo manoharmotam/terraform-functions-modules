@@ -20,7 +20,8 @@ output "replace" {
     value = replace(data.aws_instance.get_data.private_ip, ".", "-")
 }
 
+#Indents the output to 8 spaces in this case (172.31.66.44 ==> "        172.31.66.44")
 output "indent" {
-    value = indent(4, data.aws_instance.get_data.private_ip)
+    value = indent(8, data.aws_instance.get_data.private_ip)
 }
 

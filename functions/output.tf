@@ -15,3 +15,8 @@ output "separator" {
     value = split(".",data.aws_instance.get_data.private_ip)
 }
 
+#Replaces the string with provided delimiter with another (172.31.66.44 ==> 172.31.66.44)
+output "replace" {
+    value = replace(data.aws_instance.get_data.private_ip, ".", "-")
+}
+

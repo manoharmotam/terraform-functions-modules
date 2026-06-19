@@ -37,8 +37,8 @@ output "b64encode" {
     value = base64encode(data.aws_s3_bucket.get_s3_data.hosted_zone_id)
 }
 
-#checks of the string contains a provided value
-output "contains" {
-    value = contains(data.aws_s3_bucket.get_s3_data.bucket_regional_domain_name, "us-east-1")
+#simple contains fucntion that checks a substring in a string
+output "strcontains" {
+    value = strcontains(data.aws_s3_bucket.get_s3_data.bucket_regional_domain_name, "us-east-1")
     description = "Checks if the regional domain name contains the us-east-1 in its string"
 }

@@ -20,3 +20,7 @@ output "replace" {
     value = replace(data.aws_instance.get_data.private_ip, ".", "-")
 }
 
+output "indent" {
+    value = indent(4, data.aws_instance.get_data.private_ip)
+}
+

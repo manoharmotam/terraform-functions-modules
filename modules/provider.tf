@@ -5,4 +5,11 @@ terraform {
         version = "6.48.0"
     }
   }
+  backend "s3" {
+    bucket = "value"
+    key = "value"
+    region = "us-east-1"
+    use_lockfile = true
+    encrypt = true
+  }
 }

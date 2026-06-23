@@ -6,8 +6,8 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "value"
-    key = "value"
+    bucket = "manoharmotam-remote-state-dev"
+    key = "testing.tfstate"
     region = "us-east-1"
     use_lockfile = true
     encrypt = true

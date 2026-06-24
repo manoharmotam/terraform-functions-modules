@@ -1,6 +1,6 @@
 resource "aws_instance" "test-ec2" {
-    ami = local.ami
-    instance_type = local.instance_type
+    ami = var.ami
+    instance_type = var.instance_type
     vpc_security_group_ids = [ aws_security_group.test-sg.id ]
 
     tags = {
